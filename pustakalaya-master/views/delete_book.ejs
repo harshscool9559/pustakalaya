@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+<div class="container mt-5">
+    <h1>DELETE BOOK</h1>
+
+    <%if (message) {%>
+    <strong><%=message['intro']%></strong> <p><%=message['message']%></p>
+    <%}%>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-body">
+
+                    <form action="/deleteBook" method="POST">
+                        <div class="form-group">
+                            <label for="ISBN">ISBN</label>
+                            <input type="text" class="form-control" name="ISBN">
+                        </div>
+                        <button type="submit" class="btn btn-dark">Delete Book</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<%- include('partials/footer') %>

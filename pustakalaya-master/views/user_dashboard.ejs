@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+<div class="container mt-5">
+    <style>
+        div {
+            padding: 15px 10px 15px 30px;
+        }
+    </style>
+    <center>
+        <% if(librarian === 0) {%>
+            <h3 class="lead">Fines: <%=fines%></h3>
+        <% } %>
+    </center>
+    
+    <form action="/dashboard/search_book" method="get">
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark form-control" >Search a book</button>
+        </div>
+    </form>
+
+    <form action="/dashboard/issued_books" method="get">
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark form-control" >Issued Books</button>
+        </div>
+    </form>
+
+    <form action="/dashboard/holds_placed" method="get">
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark form-control" >Holds placed</button>
+        </div>
+    </form>
+
+    <form action="/dashboard/book_shelf" method="get">
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark form-control" >Book Shelf</button>
+        </div>
+    </form>
+
+    <% if(librarian){  %>
+    <form action="/librarian_special" method="get">
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark form-control" >For Librarian</button>
+        </div>
+    </form>
+    <% }   %>
+    
+    <form action="/dashboard/search_people" method="get">
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark form-control" >To Add Friends</button>
+        </div>
+    </form>
+
+    <form action="/dashboard/friend_list" method="get">
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark form-control" >For Viewing Friends</button>
+        </div>
+    </form>
+
+    <form action="/dashboard/recommendations" method="get">
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark form-control" >For Book Recommendations</button>
+        </div>
+    </form>
+</div>
+<%- include('partials/footer') %>

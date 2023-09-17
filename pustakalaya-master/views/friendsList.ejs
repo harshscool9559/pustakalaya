@@ -1,0 +1,41 @@
+<%- include('partials/header') %>
+<table class="table table-bordered table-hover" border="1px">
+    <thead class="thead-dark">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        
+            <% data1.forEach(function(result){    %>
+            <tr>
+                <td>
+                    <%= result.id %>
+                </td>
+                <td><%= result.name %></td>
+                <td><a href="/remove_friend/<%= result.id %>">Remove</a></td>
+            </tr>
+            <% })   %>
+            <% data2.forEach(function(result){    %>
+                <tr>
+                    <td>
+                        <%= result.id %>
+                    </td>
+                    <td><%= result.name %></td>
+                    <td><a href="/remove_friend/<%= result.id %>">Remove</a></td>
+                </tr>
+            <% })   %>
+            <% data3.forEach(function(result){    %>
+                <tr>
+                    <td>
+                        <%= result.id %>
+                    </td>
+                    <td><%= result.name %></td>
+                    <td><a href="/remove_friend/<%= result.id %>">Remove</a></td>
+                </tr>
+            <% })   %>
+        
+    </tbody>
+    
+</table>
+<%- include('partials/footer') %>

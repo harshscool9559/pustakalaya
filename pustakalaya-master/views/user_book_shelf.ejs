@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+    
+<table class="table table-bordered table-hover" border="1px">
+    <thead class="thead-dark">
+        <tr>
+            <td>S.No</td>
+            <td>ISBN</td>
+            <td>Title</td>
+        </tr>
+    </thead>
+        <% for(var i=1;i<=results.length;i++){   %>
+            <tr>
+                <td><%= i %></td>
+                <td><%= results[i-1].ISBN %></td>
+                <td><%= results[i-1].title %></td>
+            </tr>
+        <% }    %>
+</table>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+<div class="container mt-5">
+    <h1>ADD SHELF</h1>
+
+    <%if (message) {%>
+        <strong><%=message['intro']%></strong> <p><%=message['message']%></p>
+    <%}%>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-body">
+
+                    <form action="/addShelf" method="POST">
+                        <div class="form-group">
+                            <label for="shelf_id">Shelf ID</label>
+                            <input type="text" class="form-control" name="shelf_id">
+                        </div>
+                        <div class="form-group">
+                            <label for="capacity">Capacity</label>
+                            <input type="number" class="form-control" name="capacity">
+                        </div>
+                        <button type="submit" class="btn btn-dark">Add Shelf</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<%- include('partials/footer') %>
